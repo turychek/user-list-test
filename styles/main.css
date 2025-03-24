@@ -1,0 +1,31 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ecf6ff;
+  margin: 0;
+  display: flex;
+}
+
+:root {
+  --button-primary: rgb(30, 138, 226);
+  --error-color: rgb(241, 85, 85);
+  --success-color: rgb(45, 163, 45);
+  --text-primary: rgb(255, 255, 255);
+  --background-primary: rgb(235, 237, 240);
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  color: #343a40;
+}
+
+.container {
+  padding: 80px 20px 20px;
+  flex: 1;
+  max-height: calc(100vh - 100px);
+}

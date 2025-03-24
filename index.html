@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AngularJS User Management</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="app/pages/users/users.css" />
+    <link rel="stylesheet" href="app/pages/user-detail/user-detail.css" />
+    <link rel="stylesheet" href="app/components/user-input/user-input.css" />
+    <link rel="stylesheet" href="app/components/user-form/user-form.css" />
+    <link rel="stylesheet" href="app/pages/errors/errors.css" />
+  </head>
+  <body>
+    <div class="container" ui-view></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.20/angular-ui-router.js"></script>
+
+    <script src="app/app.routes.js"></script>
+    <script src="app/services/user.service.js"></script>
+    <script src="app/services/validation.service.js"></script>
+
+    <!-- Контроллеры -->
+    <script src="app/pages/users/users.controller.js"></script>
+    <script src="app/pages/user-detail/user-detail.controller.js"></script>
+    <script src="app/components/user-input/user-input.controller.js"></script>
+    <script src="app/components/user-form/user-form.controller.js"></script>
+  </body>
+</html>

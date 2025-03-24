@@ -1,0 +1,44 @@
+<div class="users">
+  <div class="users__table-container">
+    <div class="users__table-actions">
+      <button class="users__add-btn" ng-click="addUser()">Create user</button>
+    </div>
+
+    <table class="users__table">
+      <thead>
+        <tr>
+          <th>username</th>
+          <th>first name</th>
+          <th>last name</th>
+          <th>email</th>
+          <th>type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          ng-repeat="user in users track by user.id"
+          ng-click="editUser(user)"
+        >
+          <td>{{ user.username }}</td>
+          <td>{{ user.first_name }}</td>
+          <td>{{ user.last_name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.user_type }}</td>
+          <!-- <td>
+            <button ng-click="editUser(user)">Редактировать</button>
+            <button ng-click="deleteUser(user.username)">Удалить</button>
+          </td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- Форма пользователя -->
+  <user-form
+    class="user-form"
+    ng-if="showForm"
+    edit-mode="editMode"
+    user="user"
+    on-close="onClose()"
+    on-save="onSave()"
+  ></user-form>
+</div>

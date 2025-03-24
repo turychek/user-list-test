@@ -1,0 +1,17 @@
+<div class="user-input">
+  <label class="user-input__label">{{$ctrl.title}}</label>
+  <input
+    class="user-input__input"
+    ng-class="{'has-error': $ctrl.error}"
+    type="{{$ctrl.fieldType}}"
+    ng-model="$ctrl.ngModel"
+    required
+  />
+  <p
+    class="user-input__message"
+    ng-if="$ctrl.error"
+    ng-class="{'visible': $ctrl.error}"
+  >
+    {{$ctrl.error}}
+  </p>
+</div>

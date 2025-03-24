@@ -1,0 +1,104 @@
+<p class="user-form__title">
+  {{$ctrl.editMode ? $ctrl.formData.first_name + " " + $ctrl.formData.last_name
+  : "Create new user"}}
+</p>
+<form class="user-form__form" name="userForm" ng-submit="$ctrl.saveUser()">
+  <user-input
+    ng-model="$ctrl.formData.username"
+    fieldType="text"
+    title="Username *"
+    error-message="$ctrl.errors.username"
+  ></user-input>
+
+  <user-input
+    ng-model="$ctrl.formData.first_name"
+    fieldType="text"
+    title="First name *"
+    error-message="$ctrl.errors.first_name"
+  ></user-input>
+
+  <user-input
+    ng-model="$ctrl.formData.last_name"
+    fieldType="text"
+    title="Last name *"
+    error-message="$ctrl.errors.last_name"
+  ></user-input>
+
+  <user-input
+    ng-model="$ctrl.formData.email"
+    fieldType="email"
+    title="Email *"
+    error-message="$ctrl.errors.email"
+  ></user-input>
+
+  <div class="user-input">
+    <label>Type *</label>
+    <select
+      class="user-input__input"
+      ng-model="$ctrl.formData.user_type"
+      required
+    >
+      <option value="Admin">Admin</option>
+      <option value="Driver">Driver</option>
+    </select>
+    <p class="user-input__message" ng-if="$ctrl.errors.user_type">
+      {{$ctrl.errors.user_type}}
+    </p>
+  </div>
+
+  <user-input
+    ng-model="$ctrl.formData.password"
+    fieldType="password"
+    title="Password *"
+    error-message="$ctrl.errors.password"
+  ></user-input>
+
+  <user-input
+    ng-model="$ctrl.formData.repeat_password"
+    fieldType="password"
+    title="Repeat password *"
+    error-message="$ctrl.errors.repeat_password"
+  ></user-input>
+
+  <div ng-if="$ctrl.editMode" class="user-form__actions with-delete">
+    <button
+      class="users__delete-btn"
+      type="button"
+      ng-click="$ctrl.deleteUser()"
+    >
+      Delete
+    </button>
+    <button class="users__add-btn" type="submit">Save</button>
+  </div>
+  <div ng-if="!$ctrl.editMode" class="user-form__actions">
+    <button class="users__add-btn" type="submit">Create</button>
+  </div>
+  <button
+    class="user-form__close-button"
+    type="button"
+    ng-click="$ctrl.onClose()"
+  >
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18 6L6 18"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M6 6L18 18"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+</form>

@@ -1,0 +1,77 @@
+.users {
+  display: flex;
+  gap: 16px;
+  height: 100%;
+}
+
+.users__table-container {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  gap: 16px;
+  border-radius: 4px;
+}
+
+.users__table-actions {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.users__title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.users__add-btn {
+  background-color: var(--button-primary);
+  color: var(--text-primary);
+  border: none;
+  cursor: pointer;
+}
+
+.users__table {
+  width: 100%;
+  background-color: var(--text-primary);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+  border-radius: 4px;
+}
+
+.users__table th,
+.users__table td {
+  padding: 8px 16px 8px 24px;
+  text-align: left;
+}
+.users__table tr {
+  height: 60px;
+}
+.users__table tbody tr {
+  cursor: pointer;
+  transition: all 0.3s;
+  background: var(--background-primary);
+  border-bottom: 1px solid var(--text-primary);
+}
+.users__table tbody tr:hover {
+  background: rgb(226, 229, 231);
+}
+.users__table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.users__table th {
+  color: gray;
+  text-transform: uppercase;
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
