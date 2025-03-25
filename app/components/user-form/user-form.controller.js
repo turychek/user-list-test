@@ -4,6 +4,7 @@ function userFormController(userService, validationService, $scope) {
   $ctrl.$onInit = function () {
     if ($ctrl.user) {
       $ctrl.formData = angular.copy($ctrl.user);
+      $ctrl.formData.repeat_password = $ctrl.formData.password;
     } else {
       $ctrl.formData = {
         username: "",

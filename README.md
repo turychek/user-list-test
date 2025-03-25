@@ -37,17 +37,28 @@ A user management system developed in AngularJS. The project provides an interfa
 git clone <repository-url>
 ```
 
-2. Open the project in a browser using Node.js and http-server:
+2. Install dependencies:
 
 ```bash
-npm install -g http-server
-http-server
+npm install
 ```
 
-3. Open the app in your browser:
+3. Run the project:
+
+```bash
+npm run start
+```
+
+After executing the command:
+
+- A browser will automatically open with the application
+- The browser will automatically reload when files are changed
+- Developer tools are available in the browser
+
+The application will be available at:
 
 ```
-http://localhost:8080
+http://localhost:3000
 ```
 
 ## Project structure

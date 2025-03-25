@@ -1,12 +1,12 @@
 {
   "name": "user-list-test",
   "version": "1.0.0",
-  "description": "Проект на Angular 1.8.2",
+  "description": "User Management System on AngularJS",
   "main": "index.html",
   "scripts": {
-    "start": "http-server -o"
+    "start": "lite-server --open 'app'"
   },
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "lite-server": "^2.6.1"
   }
 }
