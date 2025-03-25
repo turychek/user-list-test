@@ -12,11 +12,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: "app/pages/users/users.view.html",
       controller: "UsersController",
     })
-    .state("userDetail", {
-      url: "/users/:id",
-      templateUrl: "app/pages/user-detail/user-detail.view.html",
-      controller: "UserDetailController",
-    })
     .state("403", {
       url: "/403",
       templateUrl: "app/pages/errors/403.html",
